@@ -4,10 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.muratcanabay</groupId>
-    <artifactId>microservice-example</artifactId>
+    <artifactId>spring-microservice-example</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Spring Boot Microservice Application Parent</name>
     <description>Microservice Example Project</description>
+
+    <modules>
+        <module>api-limit-service</module>
+    </modules>
 
 </project>
