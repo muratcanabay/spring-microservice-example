@@ -6,5 +6,6 @@ spring:
     config:
       server:
         git:
-          uri: file:///C:/Users/murat/Desktop/dev/spring-microservice-example/git-config-repo
-          default-label: main
+          uri: https://github.com/muratcanabay/config-repo
+  application:
+    name: config-server
