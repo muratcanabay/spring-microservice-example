@@ -3,6 +3,8 @@ spring:
     import: optional:configserver:http://localhost:8888
   application:
     name: api-limit-service
+  profiles:
+    active: dev
 
 server:
   port: 1000
