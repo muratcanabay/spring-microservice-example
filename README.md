@@ -2,6 +2,7 @@
 - [Overview](#overview)
 - [Application List](#application-list)
 - [URLs](#urls)
+- [Postman Collection](#postman-collection)
 - [Licence](#licence)
 - [Errors](#errors)
 
@@ -14,10 +15,11 @@ Switch profile between **dev/test** to see the change in api-limit-service prope
 
 ### Application List
 
-|          Application       |       Port        |
-| -------------------------- | ----------------- |
-|         Limits Service     |        1000       |
-| Spring Cloud Config Server |        8888       |
+| Application                | Port |
+|----------------------------|------|
+| Limits Service             | 1000 |
+| Currency Service           | 2000 |
+| Spring Cloud Config Server | 8888 |
 
 ### URLs
 
@@ -27,6 +29,10 @@ Switch profile between **dev/test** to see the change in api-limit-service prope
 |                                                 |                                                     |
 | http://localhost:8888/api-limit-service/test    |          ***Config Server Test Properties***        |
 | http://localhost:8888/api-limit-service/dev     |        ***Config Server Development Properties***   |
+
+### Postman Collection
+
+[Postman Collection](spring-microservice-example.postman_collection.json)
 
 ### Licence
 

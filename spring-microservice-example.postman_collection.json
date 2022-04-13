@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "ed30c878-491f-4a04-a63f-60eb37e3d724",
+		"name": "spring-microservice-example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api-limit-service",
+			"item": [
+				{
+					"name": "getLimits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1000/limits",
+							"host": [
+								"localhost"
+							],
+							"port": "1000",
+							"path": [
+								"limits"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "config-server",
+			"item": [
+				{
+					"name": "ApiLimitService Dev",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/api-limit-service/dev",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api-limit-service",
+								"dev"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ApiLimitService Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8888/api-limit-service/test",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"api-limit-service",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "currency-exchange",
+			"item": [
+				{
+					"name": "currencyExchange 2000",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2000/currency-exchange/from/TR/to/USD",
+							"host": [
+								"localhost"
+							],
+							"port": "2000",
+							"path": [
+								"currency-exchange",
+								"from",
+								"TR",
+								"to",
+								"USD"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "currencyExchange 2001",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2001/currency-exchange/from/TR/to/USD",
+							"host": [
+								"localhost"
+							],
+							"port": "2001",
+							"path": [
+								"currency-exchange",
+								"from",
+								"TR",
+								"to",
+								"USD"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
