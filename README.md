@@ -11,14 +11,14 @@ Centralized Config Server retrieves properties from git repository: [Config Repo
 ### Spring Profile
 Switch profile between **dev/test** to see the change in api-limit-service properties file.
 
-### [Application List](#ApplicationList)
+### Application List
 
 |          Application       |       Port        |
 | -------------------------- | ----------------- |
 |         Limits Service     |        1000       |
 | Spring Cloud Config Server |        8888       |
 
-### [URLs](#URL)
+### URLs
 
 |                      URL                        |                      Description                    |
 | ----------------------------------------------- | --------------------------------------------------- |
@@ -27,7 +27,7 @@ Switch profile between **dev/test** to see the change in api-limit-service prope
 | http://localhost:8888/api-limit-service/test    |          ***Config Server Test Properties***        |
 | http://localhost:8888/api-limit-service/dev     |        ***Config Server Development Properties***   |
 
-### [Errors](#error)
+### Errors
 #### In case of ***java: variable first not initialized in the default constructor***
 
 Make sure to Enable Lombok Annotation Processing
