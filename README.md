@@ -2,6 +2,7 @@
 - [Overview](#overview)
 - [Application List](#application-list)
 - [URLs](#urls)
+- [Licence](#licence)
 - [Errors](#errors)
 
 # Overview
@@ -26,6 +27,10 @@ Switch profile between **dev/test** to see the change in api-limit-service prope
 |                                                 |                                                     |
 | http://localhost:8888/api-limit-service/test    |          ***Config Server Test Properties***        |
 | http://localhost:8888/api-limit-service/dev     |        ***Config Server Development Properties***   |
+
+### Licence
+
+[MIT](LICENSE.MIT)
 
 ### Errors
 #### In case of ***java: variable first not initialized in the default constructor***
