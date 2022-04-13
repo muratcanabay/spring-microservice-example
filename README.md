@@ -1,8 +1,8 @@
 # Table of Contents
-- [Overview](#Overview)
-- [Application List](#ApplicationList)
-- [URLs](#URL)
-- [Errors](#Error)
+- [Overview](#overview)
+- [Application List](#application-list)
+- [URLs](#urls)
+- [Errors](#errors)
 
 # Overview
 Spring Boot based project to demonstrate microservice implementation.
