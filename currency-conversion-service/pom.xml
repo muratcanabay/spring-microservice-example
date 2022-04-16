@@ -11,10 +11,10 @@
     </parent>
 
     <groupId>com.muratcanabay</groupId>
-    <artifactId>currency-exchange-service</artifactId>
+    <artifactId>currency-conversion-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>currency-exchange-service</name>
-    <description>Currency Exchange Micro Service Project</description>
+    <name>currency-conversion-service</name>
+    <description>Currency Conversion Micro Service Project</description>
 
     <properties>
         <java.version>11</java.version>

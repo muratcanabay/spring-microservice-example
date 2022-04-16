@@ -2,7 +2,7 @@ spring:
   config:
     import: optional:configserver:http://localhost:8888
   application:
-    name: currency-service
+    name: currency-exchange-service
   profiles:
     active: dev
 
@@ -16,7 +16,7 @@ spring:
     defer-datasource-initialization: true
   # h2 default random database name like: jdbc:h2:mem:adff70e6-84e6-4b86-8ec7-e1df22f3386d
   datasource:
-    url: jdbc:h2:mem:currency
+    url: jdbc:h2:mem:currency-exchange
 
 server:
   port: 2000
