@@ -18,7 +18,7 @@ Switch ***spring.profiles.active*** in the in [api-limit-service](api-limit-serv
 | Application                | Port |
 |----------------------------|------|
 | Limits Service             | 1000 |
-| Currency Service           | 2000 |
+| Currency Exchange Service  | 2000 |
 | Spring Cloud Config Server | 8888 |
 
 ### URLs

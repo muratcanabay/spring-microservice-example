@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="CurrencyExchangeServiceApplication 2001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-    <module name="currency-service" />
+    <module name="currency-exchange-service" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.muratcanabay.CurrencyServiceApplication" />
     <option name="VM_PARAMETERS" value="-Dserver.port=2001" />
     <option name="ALTERNATIVE_JRE_PATH" />
