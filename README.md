@@ -15,23 +15,26 @@ Switch ***spring.profiles.active*** in the in [api-limit-service](api-limit-serv
 
 ### Application List
 
-| Application                | Port |
-|----------------------------|------|
-| Limits Service             | 1000 |
-| Currency Exchange Service  | 2000 |
-| Spring Cloud Config Server | 8888 |
+| Application                 | Port |
+|-----------------------------|------|
+| Limits Service              | 1000 |
+| Currency Exchange Service   | 2000 |
+| Currency Conversion Service | 3000 |
+| Spring Cloud Config Server  | 8888 |
 
 ### URLs
 
-| URL                                                    | Description                                |
-|--------------------------------------------------------|--------------------------------------------|
-| http://localhost:1000/limits                           | ***Api Limit Service***                    |
-|                                                        |                                            |
-| http://localhost:8888/api-limit-service/test           | ***Config Server Test Properties***        |
-| http://localhost:8888/api-limit-service/dev            | ***Config Server Development Properties*** |
-|                                                        |                                            |
-| http://localhost:2000/h2-console                       | ***h2 Database Console***                  |
-| http://localhost:2000/currency-exchange/from/TR/to/USD | ***Currency Exchange Api***                |
+| URL                                                                  | Description                                |
+|----------------------------------------------------------------------|--------------------------------------------|
+| http://localhost:1000/limits                                         | ***Api Limit Service***                    |
+|                                                                      |                                            |
+| http://localhost:8888/api-limit-service/test                         | ***Config Server Test Properties***        |
+| http://localhost:8888/api-limit-service/dev                          | ***Config Server Development Properties*** |
+|                                                                      |                                            |
+| http://localhost:2000/h2-console                                     | ***h2 Database Console***                  |
+| http://localhost:2000/currency-exchange/from/TR/to/USD               | ***Currency Exchange Api***                |
+|                                                                      |                                            |
+| http://localhost:3000/currency-conversion/from/TR/to/USD/quantity/10 | ***Currency Conversion Api***              |
 
 ### Postman Collection
 

@@ -119,6 +119,35 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "currency-conversion",
+			"item": [
+				{
+					"name": "currencyConversion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/currency-conversion/from/TR/to/USD/quantity/10",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"currency-conversion",
+								"from",
+								"TR",
+								"to",
+								"USD",
+								"quantity",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
