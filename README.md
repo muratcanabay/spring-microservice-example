@@ -2,6 +2,7 @@
 - [Overview](#overview)
 - [Application List](#application-list)
 - [URLs](#urls)
+- [Load Balancing](#load-balancing)
 - [Postman Collection](#postman-collection)
 - [Licence](#licence)
 - [Errors](#errors)
@@ -38,6 +39,12 @@ Switch ***spring.profiles.active*** in the in [api-limit-service](api-limit-serv
 | http://localhost:3000/currency-conversion/from/TR/to/USD/quantity/10 | ***Currency Conversion Api***              |
 |                                                                      |                                            |
 | http://localhost:8761                                                |  ***Eureka Server***                       |
+
+### Load Balancing
+
+![Load Balancing](./doc/statics/load-balancing.gif)
+
+Feign Client uses the load balancer inside Eureka Client dependency to share request traffic between application instances.
 
 ### Postman Collection
 
