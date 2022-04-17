@@ -21,6 +21,7 @@ Switch ***spring.profiles.active*** in the in [api-limit-service](api-limit-serv
 | Currency Exchange Service   | 2000 |
 | Currency Conversion Service | 3000 |
 | Spring Cloud Config Server  | 8888 |
+| Eureka Config Server        | 8761 |
 
 ### URLs
 
@@ -35,6 +36,8 @@ Switch ***spring.profiles.active*** in the in [api-limit-service](api-limit-serv
 | http://localhost:2000/currency-exchange/from/TR/to/USD               | ***Currency Exchange Api***                |
 |                                                                      |                                            |
 | http://localhost:3000/currency-conversion/from/TR/to/USD/quantity/10 | ***Currency Conversion Api***              |
+|                                                                      |                                            |
+| http://localhost:8761                                                |  ***Eureka Server***                       |
 
 ### Postman Collection
 
