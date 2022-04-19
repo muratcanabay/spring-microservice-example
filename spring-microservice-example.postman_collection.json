@@ -148,6 +148,61 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "api-gateway",
+			"item": [
+				{
+					"name": "currencyExchange",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/CURRENCY-EXCHANGE-SERVICE/currency-exchange/from/TR/to/USD",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"CURRENCY-EXCHANGE-SERVICE",
+								"currency-exchange",
+								"from",
+								"TR",
+								"to",
+								"USD"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "currencyConversion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/CURRENCY-CONVERSION-SERVICE/currency-conversion/from/TR/to/USD/quantity/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"CURRENCY-CONVERSION-SERVICE",
+								"currency-conversion",
+								"from",
+								"TR",
+								"to",
+								"USD",
+								"quantity",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

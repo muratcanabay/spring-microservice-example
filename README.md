@@ -22,23 +22,27 @@ Switch ***spring.profiles.active*** in the in [api-limit-service](api-limit-serv
 | Currency Exchange Service   | 2000 |
 | Currency Conversion Service | 3000 |
 | Spring Cloud Config Server  | 8888 |
+| Spring Cloud Gateway        | 8765 |
 | Eureka Config Server        | 8761 |
 
 ### URLs
 
-| URL                                                                  | Description                                |
-|----------------------------------------------------------------------|--------------------------------------------|
-| http://localhost:1000/limits                                         | ***Api Limit Service***                    |
-|                                                                      |                                            |
-| http://localhost:8888/api-limit-service/test                         | ***Config Server Test Properties***        |
-| http://localhost:8888/api-limit-service/dev                          | ***Config Server Development Properties*** |
-|                                                                      |                                            |
-| http://localhost:2000/h2-console                                     | ***h2 Database Console***                  |
-| http://localhost:2000/currency-exchange/from/TR/to/USD               | ***Currency Exchange Api***                |
-|                                                                      |                                            |
-| http://localhost:3000/currency-conversion/from/TR/to/USD/quantity/10 | ***Currency Conversion Api***              |
-|                                                                      |                                            |
-| http://localhost:8761                                                |  ***Eureka Server***                       |
+| URL                                                                                               | Description                                |
+|---------------------------------------------------------------------------------------------------|--------------------------------------------|
+| http://localhost:1000/limits                                                                      | ***Api Limit Service***                    |
+|                                                                                                   |                                            |
+| http://localhost:8888/api-limit-service/test                                                      | ***Config Server Test Properties***        |
+| http://localhost:8888/api-limit-service/dev                                                       | ***Config Server Development Properties*** |
+|                                                                                                   |                                            |
+| http://localhost:2000/h2-console                                                                  | ***h2 Database Console***                  |
+| http://localhost:2000/currency-exchange/from/TR/to/USD                                            | ***Currency Exchange Api***                |
+|                                                                                                   |                                            |
+| http://localhost:3000/currency-conversion/from/TR/to/USD/quantity/10                              | ***Currency Conversion Api***              |
+|                                                                                                   |                                            |
+| http://localhost:8761                                                                             | ***Eureka Server***                        |
+|                                                                                                   |                                            |
+| http://localhost:8765/CURRENCY-EXCHANGE-SERVICE/currency-exchange/from/TR/to/USD                  | ***Currency Exchange Api Over Gateway***   |
+| http://localhost:8765/CURRENCY-CONVERSION-SERVICE/currency-conversion/from/TR/to/USD/quantity/10  | ***Currency Conversion Api Over Gateway*** |
 
 ### Load Balancing
 
