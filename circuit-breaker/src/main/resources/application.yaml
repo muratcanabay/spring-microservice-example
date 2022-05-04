@@ -15,3 +15,10 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+
+resilience4j:
+  retry:
+    instances:
+      get-message:
+        maxAttempts: 2
+        waitDuration: 1000
