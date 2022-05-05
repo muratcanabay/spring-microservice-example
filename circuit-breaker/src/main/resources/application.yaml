@@ -22,3 +22,9 @@ resilience4j:
       get-message:
         maxAttempts: 2
         waitDuration: 1000
+  # Allows 2 requests in 10 seconds.
+  ratelimiter:
+    instances:
+      get-message:
+        limitForPeriod: 2
+        limitRefreshPeriod: 10s

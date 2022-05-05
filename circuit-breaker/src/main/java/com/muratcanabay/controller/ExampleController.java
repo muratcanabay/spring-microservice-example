@@ -1,5 +1,6 @@
 package com.muratcanabay.controller;
 
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.github.resilience4j.retry.annotation.Retry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +19,8 @@ public class ExampleController {
      * and then {@code fallbackMethod} executed. Waits {@code waitDuration (default = 500 [ms])} between every attempt.
      * <br>
      * See: {@link = https://resilience4j.readme.io/docs/retry}
+     *
+     * @return A message
      */
     @GetMapping("/sample-api")
     @Retry(name = "get-message", fallbackMethod = "defaultResponse")
@@ -27,7 +30,26 @@ public class ExampleController {
         return response.getBody();
     }
 
+    /**
+     * {@link io.github.resilience4j.ratelimiter.annotation.RateLimiter} allows request per {@code limitForPeriod (default = 50)}
+     * as many as the {@code limitRefreshPeriod (default = 500 [ns])} parameter.
+     * <br>
+     * See: {@link = https://resilience4j.readme.io/docs/ratelimiter}
+     *
+     * @return A message
+     */
+    @GetMapping("/sample-api-v2")
+    @RateLimiter(name = "get-message", fallbackMethod = "defaultRateLimiterResponse")
+    public String getMessage2() {
+        logger.info("getMessage2() method called.");
+        return "Hi!";
+    }
+
     public String defaultResponse(Exception e) {
         return "Something went wrong :(";
+    }
+
+    public String defaultRateLimiterResponse(Exception e) {
+        return "Please wait! Page is loading...";
     }
 }
