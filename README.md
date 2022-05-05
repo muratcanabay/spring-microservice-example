@@ -38,7 +38,8 @@ Switch ***spring.profiles.active*** in the in [api-limit-service](api-limit-serv
 | http://localhost:2000/h2-console                                     | ***h2 Database Console***                  |
 | http://localhost:2000/currency-exchange/from/TR/to/USD               | ***Currency Exchange Api***                |
 | http://localhost:3000/currency-conversion/from/TR/to/USD/quantity/10 | ***Currency Conversion Api***              |
-| http://localhost:4000/sample-api                                     | ***Circuit Breaker Api***                  |
+| http://localhost:4000/sample-api                                     | ***Circuit Breaker Api Retry***            |
+| http://localhost:4000/sample-api-v2                                  | ***Circuit Breaker Api Rate Limiter***     |
 |                                                                      |                                            |
 | http://localhost:8761                                                | ***Eureka Server***                        |
 
@@ -47,6 +48,7 @@ Switch ***spring.profiles.active*** in the in [api-limit-service](api-limit-serv
 | http://localhost:8765/currency-exchange/from/TR/to/USD               | ***Currency Exchange Api Over Gateway***   |
 | http://localhost:8765/currency-conversion/from/TR/to/USD/quantity/10 | ***Currency Conversion Api Over Gateway*** |
 | http://localhost:8765/sample-api                                     | ***Circuit Breaker Api Over Gateway***     |
+| http://localhost:8765/sample-api-v2                                  | ***Circuit Breaker Api Over Gateway***     |
 
 ### Load Balancing
 
