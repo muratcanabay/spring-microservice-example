@@ -69,4 +69,3 @@ Feign Client uses the load balancer inside Eureka Client dependency to share req
 
 Make sure to Enable Lombok Annotation Processing
  
- jenkins test
