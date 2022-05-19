@@ -3,6 +3,7 @@
 - [Application List](#application-list)
 - [URLs](#urls)
 - [Load Balancing](#load-balancing)
+- [Docker Images](#docker-images)
 - [Postman Collection](#postman-collection)
 - [Licence](#licence)
 - [Errors](#errors)
@@ -49,6 +50,12 @@ Switch ***spring.profiles.active*** in the in [api-limit-service](api-limit-serv
 | http://localhost:8765/currency-conversion/from/TR/to/USD/quantity/10 | ***Currency Conversion Api Over Gateway*** |
 | http://localhost:8765/sample-api                                     | ***Circuit Breaker Api Over Gateway***     |
 | http://localhost:8765/sample-api-v2                                  | ***Circuit Breaker Api Over Gateway***     |
+
+### Docker Images
+
+```
+docker run -p 2000:2000 muratcanabay/microservice-example-currency-exchange-service:0.0.1-SNAPSHOT
+```
 
 ### Load Balancing
 

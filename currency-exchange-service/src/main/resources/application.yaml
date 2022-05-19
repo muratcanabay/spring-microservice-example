@@ -5,6 +5,10 @@ spring:
     name: currency-exchange-service
   profiles:
     active: dev
+  sleuth:
+    sampler:
+      # Trace %100 of request
+      probability: 1.0
 
   # h2 properties
   h2:

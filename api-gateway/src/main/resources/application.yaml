@@ -8,6 +8,10 @@ spring:
       discovery:
         locator:
           enabled: true
+  sleuth:
+    sampler:
+      # Trace %100 of request
+      probability: 1.0
 
 server:
   port: 8765
