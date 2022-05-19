@@ -5,6 +5,10 @@ spring:
     name: currency-conversion-service
   profiles:
     active: dev
+  sleuth:
+    sampler:
+      # Trace %100 of request
+      probability: 1.0
 
 server:
   port: 3000
