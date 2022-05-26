@@ -1,0 +1,71 @@
+version: '3.7'
+
+services:
+  currency-exchange-service:
+    image: muratcanabay/microservice-example-currency-exchange-service:0.0.1-SNAPSHOT
+    ports:
+      - '2000:2000'
+    depends_on:
+      - eureka-server
+    networks:
+      - currency-network
+    environment:
+      # docker doesn't know localhost
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+
+  # Load balancing
+  currency-exchange-service-2:
+    image: muratcanabay/microservice-example-currency-exchange-service:0.0.1-SNAPSHOT
+    ports:
+      - '2001:2001'
+    depends_on:
+      - eureka-server
+    networks:
+      - currency-network
+    environment:
+      # docker doesn't know localhost
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+      SERVER.PORT: 2001
+
+  currency-conversion-service:
+    image: muratcanabay/microservice-example-currency-conversion-service:0.0.1-SNAPSHOT
+    ports:
+      - '3000:3000'
+    depends_on:
+      - eureka-server
+    networks:
+      - currency-network
+    environment:
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+
+  api-gateway:
+    image: muratcanabay/microservice-example-api-gateway:0.0.1-SNAPSHOT
+    ports:
+      - '8765:8765'
+    depends_on:
+      - eureka-server
+    networks:
+      - currency-network
+    environment:
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411/
+
+  eureka-server:
+    image: muratcanabay/microservice-example-eureka-server:0.0.1-SNAPSHOT
+    ports:
+      - '8761:8761'
+    networks:
+      - currency-network
+
+  zipkin-server:
+    image: openzipkin/zipkin:2.23
+    ports:
+      - '9411:9411'
+    networks:
+      - currency-network
+
+networks:
+  currency-network:
