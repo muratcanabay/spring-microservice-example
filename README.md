@@ -53,9 +53,7 @@ Switch ***spring.profiles.active*** in the in [api-limit-service](api-limit-serv
 
 ### Docker Images
 
-```
-docker run -p 2000:2000 muratcanabay/microservice-example-currency-exchange-service:0.0.1-SNAPSHOT
-```
+You can find all the images [here](https://hub.docker.com/u/muratcanabay).
 
 ### Load Balancing
 
