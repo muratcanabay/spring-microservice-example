@@ -58,10 +58,30 @@ Its IP address might change, they might go down but user side of the application
 ### Master Node and Worker Node
 
 ![Master Node](statics/g-cloud/master-node.png)
+<br>
 Master node manages cluster.
 
 ![Worker Node](statics/g-cloud/worker-node.png)
-Worker node runs your application.
+<br>Worker node runs your application.
+
+### YAML Configuration File
+
+```
+kubectl get deployments -o yaml
+kubectl get deployment hello-world -o yaml >> deployment.yaml
+
+kubectl get services -o yaml
+kubectl get service hello-world -o yaml >> service.yaml
+```
+
+##### Merge deployment.yaml & service.yaml
+
+Add to service.yaml under the deployment.yaml putting --- between those file to manage declarations from single file.
+<br>
+Then you may clean unnecessary part of the .yaml.
+```
+kubectl apply -f cleaned.yaml
+```
 
 ### KubeCtl
 
