@@ -125,6 +125,33 @@ Search Cloud Logging API and manage.
 Search stackdriver and enable all of them.
 ![Stackdriver](statics/g-cloud/stackdriver.png)
 
+#### Liveness and Readiness Probes [File](08cleaned-with-probes.yaml)
+
+Readiness probe is not successful, no traffic is sent.<br>
+Liveness probe is not successful, pod is restarted.<br><br>
+
+Probes are important for **zero downtime** when new version of application deployed. K8s checks probes to discover new version is ready.
+Spring Boot actuator has these configurations. Change .yaml to enable the probes.
+
+```yaml
+livenessProbe:
+  httpGet:
+    path: /actuator/health/liveness
+    port: 8080
+readinessProbe:
+  httpGet:
+    path: /actuator/health/readiness
+    port: 8080
+```
+
+### Autoscaling
+
+```
+kubectl autoscale deployment hello-world --min=1 --max=3 --cpu-percent=70
+
+kubectl get hpa
+```
+
 ### KubeCtl
 
 1. Kube Controller version
@@ -170,4 +197,20 @@ kubectl get service
 7. See Statuses
 ```
 kubectl get componentstatuses
+```
+
+8. See Horizontal Pod Autoscaler
+```
+kubectl get hpa
+```
+
+9. See Metrics of Nodes(CPU, Memory)
+```
+kubectl top node
+```
+
+* Send Request 
+```shell
+curl http://34.134.255.43:8081
+watch -n 0.1 curl http://34.134.255.43:8081 #Sends a request every 0.1sec
 ```
