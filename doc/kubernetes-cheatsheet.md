@@ -74,14 +74,56 @@ kubectl get services -o yaml
 kubectl get service hello-world -o yaml >> service.yaml
 ```
 
-##### Merge deployment.yaml & service.yaml
+##### Merge deployment.yaml & service.yaml [Merged File](03merged.yaml)
 
 Add to service.yaml under the deployment.yaml putting --- between those file to manage declarations from single file.
 <br>
 Then you may clean unnecessary part of the .yaml.
 ```
-kubectl apply -f cleaned.yaml
+kubectl apply -f 04cleaned.yaml
 ```
+
+### Delete Deployment, Service, Pod, Replicaset By Label
+
+```
+kubectl delete all -l app=hello-world
+```
+
+### Add environment variable
+
+Add env array below spec->spec->containers . Configmaps are much more preferred way. 
+
+```yaml
+env:
+    - name: HELLO_WORLD
+      value: "Hello from the environment"
+```
+
+### Config Map [Configmap](06configmap.yaml)
+
+Configmap is a kubernetes object that allows the configurations we use in our applications to be placed outside and easily managed from a single point.
+
+```
+kubectl get configmap
+kubectl get configmap -o yaml
+```
+
+* **Create Config Map** [Configmap](07cleaned-with-configmap.yaml)
+```
+kubectl create configmap hello-world-configmap --from-literal=HELLO_WORLD="Hello from the environment"
+
+kubectl get configmap hello-world-configmap -o yaml >> configmap.yaml
+
+kubectl apply -f 07cleaned-with-configmap.yaml
+```
+
+### Logging and Tracing APIs
+
+Search Cloud Logging API and manage.
+![Logging](statics/g-cloud/logging.png)
+<br>
+Search stackdriver and enable all of them.
+![Stackdriver](statics/g-cloud/stackdriver.png)
 
 ### KubeCtl
 

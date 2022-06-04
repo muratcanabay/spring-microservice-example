@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  HELLO_WORLD: Hello from the environment
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-06-04T11:32:55Z"
+  name: hello-world-configmap
+  namespace: default
+  resourceVersion: "3222452"
+  uid: 4449b4fc-eff8-49da-80da-738cdbb5e13a
